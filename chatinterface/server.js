@@ -8,8 +8,8 @@ const PORT = 5000;
 
 const GEMINI_API_KEY = "AIzaSyBtX4Fw5LL3kp0goQnEQgwOQ1AsbcI4kno"; // replace
 
-const GEMINI_API_URL =
-  "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent";
+const GEMINI_API_URL = 
+  "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
 
 app.use(cors());
 app.use(bodyParser.json());

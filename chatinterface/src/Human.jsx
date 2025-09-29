@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 
-// ---------- Avatar with Lip Sync ----------
+
 function ManAvatarWithLipSync({ lipSyncRef }) {
   const { scene } = useGLTF("/models/casual_man.glb");
   const meshRef = useRef();
@@ -13,8 +13,7 @@ function ManAvatarWithLipSync({ lipSyncRef }) {
     }
   });
 
-  // Move down slightly so head + shoulders visible
-  return <primitive ref={meshRef} object={scene} scale={4} position={[0, -1.5, 0]} dispose={null} />;
+  return <primitive ref={meshRef} object={scene} scale={3.75} position={[0.25, -6.5, 0.5]} dispose={null} />;
 }
 
 // ---------- Main Human Component ----------
@@ -185,7 +184,7 @@ export default function Human({ onToggleView }) {
           zIndex: 2,
         }}
       >
-        Stop Audio ⏹️
+        Stop Audio ⏹
       </button>
 
       {/* Thinking message */}
@@ -208,7 +207,7 @@ export default function Human({ onToggleView }) {
 
       <Canvas
         style={{ background: "linear-gradient(135deg, #43cea2 0%, #185a9d 100%)" }}
-        camera={{ position: [0, 0, 2.5], fov: 50 }} // zoomed on head + shoulders
+        camera={{ position: [0, 0, 2.6], fov: 55 }} // zoomed on head + shoulders
       >
         <ambientLight intensity={0.9} />
         <directionalLight position={[5, 10, 5]} intensity={1} />
