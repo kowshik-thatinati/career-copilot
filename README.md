@@ -1,70 +1,154 @@
-# Getting Started with Create React App
+🚀 **Career Copilot – AI-Powered Education Advisor**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Career Copilot is an advanced AI-driven education advisor providing personalized guidance through text chat and live human-like interactions. The project uses Google Gemini API, speech-to-text, text-to-speech, and lip-synced human avatars to simulate a live conversation.
 
-### `npm test`
+✨ **Features**
+1️⃣ **User Login** 🔑
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Secure login using Firebase Authentication.
 
-### `npm run build`
+Supports Google account, GitHub, or email/password sign-in.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2️⃣ **Text Chatbot** 💬
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Users can type educational or career-related queries.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Gemini API generates precise, context-aware replies.
 
-### `npm run eject`
+Instant, clean text-based interaction.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3️⃣**Live Human Bot**🤖🗣️
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Interactive Human Avatar on screen.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Voice Input: Click mic → record audio → convert to text → send to Gemini API.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Voice Output: Gemini API response → converted to audio → lip-synced playback.
 
-## Learn More
+Stop Audio ⏹️: Stop bot speech anytime.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Retry Audio 🔄: Prompts user again if audio isn’t clear.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Dark Mode 🌙: Switch theme for comfortable viewing.
 
-### Code Splitting
+4️⃣**Personalized Advice** 🎯
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Provides recommendations based on user queries, interests, and goals.
 
-### Analyzing the Bundle Size
+🛠️ **Tech Stack**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Frontend**: React.js
 
-### Making a Progressive Web App
+**Backend**: Node.js + Express
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Database / Auth**: Firebase (Authentication & Firestore)
 
-### Advanced Configuration
+**AI Integration**: Google Gemini API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Speech-to-Text / Text-to-Speech**: Web APIs / React libraries
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+⚡**How It Works**
+Phase 1 – Text Chat 💬
+User Login 🔑
+       │
+       ▼
+User Types Message ✍️
+       │
+       ▼
+Gemini API 🤖
+(Generates Response)
+       │
+       ▼
+Display Text Reply 📝
 
-### `npm run build` fails to minify
+Phase 2 – Live Human Bot 🤖🗣️
+User Clicks Mic 🎤
+       │
+       ▼
+Record Audio 🔊
+       │
+       ▼
+Convert to Text 📝
+       │
+       ▼
+Send to Gemini API 🤖
+       │
+       ▼
+Generate Response 🗨️
+       │
+       ▼
+Convert Text → Audio 🔊
+       │
+       ▼
+Play Audio + Lip-Sync 🤯👄
+       │
+       ├─> Stop Audio ⏹️ (Optional)
+       └─> Retry Audio 🔄 (If unclear)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Features Highlight** 🌟
+
+✅ Text & Voice interaction
+
+✅ Live human-like avatar with lip-sync
+
+✅ Stop / Retry audio for clarity
+
+✅ Dark mode 🌙 for comfortable viewing
+
+
+
+🚀 **Future Enhancements**
+
+Multi-language support 🌐
+
+Higher accuracy lip-sync & speech recognition 🎤
+
+Expanded educational resources 📚
+
+⚙️**Setup Instructions**
+
+Clone the repository
+
+git clone https://github.com/kowshik-thatinati/career-copilot.git
+cd career-copilot
+
+
+Install dependencies
+
+npm install
+
+
+Add Firebase Configuration
+
+Create a .env file in the root folder with:
+
+REACT_APP_FIREBASE_API_KEY=your_api_key_here
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+REACT_APP_GEMINI_API_KEY=your_gemini_api_key
+
+
+Start the Development Server
+
+npm start
+
+
+Open in your browser
+http://localhost:3000
+
+👨‍💻 Author
+
+Kowshik Thatinati
+
+GitHub: https://github.com/kowshik-thatinati
+
+Project: career-copilot
