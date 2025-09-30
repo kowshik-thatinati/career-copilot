@@ -56,36 +56,27 @@ Provides recommendations based on user queries, interests, and goals.
 ⚡**How It Works**
 Phase 1 – Text Chat 💬
 User Login 🔑
-       │
-       ▼
+       ➡️
 User Types Message ✍️
-       │
-       ▼
+       ➡️
 Gemini API 🤖
 (Generates Response)
-       │
-       ▼
+       ➡️
 Display Text Reply 📝
 
 Phase 2 – Live Human Bot 🤖🗣️
 User Clicks Mic 🎤
-       │
-       ▼
+       ➡️
 Record Audio 🔊
-       │
-       ▼
+       ➡️
 Convert to Text 📝
-       │
-       ▼
+       ➡️
 Send to Gemini API 🤖
-       │
-       ▼
+       ➡️
 Generate Response 🗨️
-       │
-       ▼
+      ➡️
 Convert Text → Audio 🔊
-       │
-       ▼
+      ➡️
 Play Audio + Lip-Sync 🤯👄
        │
        ├─> Stop Audio ⏹️ (Optional)
