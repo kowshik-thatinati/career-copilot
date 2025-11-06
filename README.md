@@ -306,6 +306,8 @@ The app supports 12 languages:
 ```bash
 # Start development server
 npm start
+OR
+npm start --legacy-peer-deps
 
 # Build for production
 npm run build
