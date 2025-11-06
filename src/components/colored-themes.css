@@ -1,0 +1,467 @@
+/* ========================================
+   COLORED THEMES - VIBRANT & BEAUTIFUL
+   ======================================== */
+
+/* 🌊 OCEAN THEME - Blue & Teal */
+.chat-wrapper.ocean {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #4facfe 100%);
+  color: #000000;
+}
+
+.chat-wrapper.ocean .sidebar {
+  background: rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-wrapper.ocean .sidebar-header h3,
+.chat-wrapper.ocean .conversation-list li {
+  color: #000000;
+}
+
+.chat-wrapper.ocean .conversation-list li {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.chat-wrapper.ocean .conversation-list li:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.chat-wrapper.ocean .conversation-list li.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: #000000;
+  font-weight: 700;
+}
+
+.chat-wrapper.ocean .chat-header {
+  background: rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-wrapper.ocean .chat-header h2 {
+  color: #000000;
+}
+
+.chat-wrapper.ocean .message-bubble.user {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.chat-wrapper.ocean .message-bubble.bot {
+  background: rgba(255, 255, 255, 0.15);
+  color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.chat-wrapper.ocean .input-box {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  color: #333;
+}
+
+.chat-wrapper.ocean .input-box::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* 🌅 SUNSET THEME - Orange & Pink */
+.chat-wrapper.sunset {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #f093fb 100%);
+  color: #000000;
+}
+
+.chat-wrapper.sunset .sidebar {
+  background: rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-wrapper.sunset .sidebar-header h3,
+.chat-wrapper.sunset .conversation-list li {
+  color: #000000;
+}
+
+.chat-wrapper.sunset .conversation-list li {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.chat-wrapper.sunset .conversation-list li:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.chat-wrapper.sunset .conversation-list li.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: #000000;
+  font-weight: 700;
+}
+
+.chat-wrapper.sunset .chat-header {
+  background: rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-wrapper.sunset .chat-header h2 {
+  color: #000000;
+}
+
+.chat-wrapper.sunset .message-bubble.user {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.chat-wrapper.sunset .message-bubble.bot {
+  background: rgba(255, 255, 255, 0.15);
+  color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.chat-wrapper.sunset .input-box {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  color: #333;
+}
+
+.chat-wrapper.sunset .input-box::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* 🌲 FOREST THEME - Green & Emerald */
+.chat-wrapper.forest {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 50%, #06beb6 100%);
+  color: #000000;
+}
+
+.chat-wrapper.forest .sidebar {
+  background: rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-wrapper.forest .sidebar-header h3,
+.chat-wrapper.forest .conversation-list li {
+  color: #000000;
+}
+
+.chat-wrapper.forest .conversation-list li {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.chat-wrapper.forest .conversation-list li:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.chat-wrapper.forest .conversation-list li.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: #000000;
+  font-weight: 700;
+}
+
+.chat-wrapper.forest .chat-header {
+  background: rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-wrapper.forest .chat-header h2 {
+  color: #000000;
+}
+
+.chat-wrapper.forest .message-bubble.user {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.chat-wrapper.forest .message-bubble.bot {
+  background: rgba(255, 255, 255, 0.15);
+  color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.chat-wrapper.forest .input-box {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  color: #333;
+}
+
+.chat-wrapper.forest .input-box::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* 🌙 MIDNIGHT THEME - Dark Blue & Purple */
+.chat-wrapper.midnight {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #f0f0f0;
+}
+
+.chat-wrapper.midnight .sidebar {
+  background: rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.chat-wrapper.midnight .sidebar-header h3,
+.chat-wrapper.midnight .conversation-list li {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.chat-wrapper.midnight .conversation-list li {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.chat-wrapper.midnight .conversation-list li:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.chat-wrapper.midnight .conversation-list li.active {
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+}
+
+.chat-wrapper.midnight .chat-header {
+  background: rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.chat-wrapper.midnight .chat-header h2 {
+  color: #f0f0f0;
+}
+
+.chat-wrapper.midnight .message-bubble.user {
+  background: rgba(102, 126, 234, 0.3);
+  color: white;
+  border: 1px solid rgba(102, 126, 234, 0.4);
+}
+
+.chat-wrapper.midnight .message-bubble.bot {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f0f0f0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-wrapper.midnight .input-box {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #333;
+}
+
+.chat-wrapper.midnight .input-box::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* 🌹 ROSE THEME - Pink & Magenta */
+.chat-wrapper.rose {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 50%, #ff6b9d 100%);
+  color: #000000;
+}
+
+.chat-wrapper.rose .sidebar {
+  background: rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-wrapper.rose .sidebar-header h3,
+.chat-wrapper.rose .conversation-list li {
+  color: #000000;
+}
+
+.chat-wrapper.rose .conversation-list li {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.chat-wrapper.rose .conversation-list li:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.chat-wrapper.rose .conversation-list li.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: #000000;
+  font-weight: 700;
+}
+
+.chat-wrapper.rose .chat-header {
+  background: rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-wrapper.rose .chat-header h2 {
+  color: #000000;
+}
+
+.chat-wrapper.rose .message-bubble.user {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.chat-wrapper.rose .message-bubble.bot {
+  background: rgba(255, 255, 255, 0.15);
+  color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.chat-wrapper.rose .input-box {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  color: #333;
+}
+
+.chat-wrapper.rose .input-box::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* ✨ AURORA THEME - Purple & Cyan */
+.chat-wrapper.aurora {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 50%, #d299c2 100%);
+  color: #000000;
+}
+
+.chat-wrapper.aurora .sidebar {
+  background: rgba(255, 255, 255, 0.15);
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.chat-wrapper.aurora .sidebar-header h3,
+.chat-wrapper.aurora .conversation-list li {
+  color: #000000;
+}
+
+.chat-wrapper.aurora .conversation-list li {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.chat-wrapper.aurora .conversation-list li:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.chat-wrapper.aurora .conversation-list li.active {
+  background: rgba(255, 255, 255, 0.28);
+  color: #000000;
+  font-weight: 700;
+}
+
+.chat-wrapper.aurora .chat-header {
+  background: rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.chat-wrapper.aurora .chat-header h2 {
+  color: #000000;
+}
+
+.chat-wrapper.aurora .message-bubble.user {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.chat-wrapper.aurora .message-bubble.bot {
+  background: rgba(255, 255, 255, 0.18);
+  color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.chat-wrapper.aurora .input-box {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.28);
+  color: #333;
+}
+
+.chat-wrapper.aurora .input-box::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Common styles for all colored themes */
+.chat-wrapper.ocean .sidebar-header button,
+.chat-wrapper.sunset .sidebar-header button,
+.chat-wrapper.forest .sidebar-header button,
+.chat-wrapper.rose .sidebar-header button,
+.chat-wrapper.aurora .sidebar-header button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #000000;
+}
+
+.chat-wrapper.midnight .sidebar-header button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #f0f0f0;
+}
+
+.chat-wrapper.ocean .clear-button,
+.chat-wrapper.ocean .toggle-button,
+.chat-wrapper.sunset .clear-button,
+.chat-wrapper.sunset .toggle-button,
+.chat-wrapper.forest .clear-button,
+.chat-wrapper.forest .toggle-button,
+.chat-wrapper.rose .clear-button,
+.chat-wrapper.rose .toggle-button,
+.chat-wrapper.aurora .clear-button,
+.chat-wrapper.aurora .toggle-button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #000000;
+}
+
+.chat-wrapper.midnight .clear-button,
+.chat-wrapper.midnight .toggle-button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #f0f0f0;
+}
+
+.chat-wrapper.ocean .clear-button:hover,
+.chat-wrapper.ocean .toggle-button:hover,
+.chat-wrapper.sunset .clear-button:hover,
+.chat-wrapper.sunset .toggle-button:hover,
+.chat-wrapper.forest .clear-button:hover,
+.chat-wrapper.forest .toggle-button:hover,
+.chat-wrapper.rose .clear-button:hover,
+.chat-wrapper.rose .toggle-button:hover,
+.chat-wrapper.aurora .clear-button:hover,
+.chat-wrapper.aurora .toggle-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #000000;
+}
+
+.chat-wrapper.midnight .clear-button:hover,
+.chat-wrapper.midnight .toggle-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #f0f0f0;
+}
+
+.chat-wrapper.ocean .chat-input-area,
+.chat-wrapper.sunset .chat-input-area,
+.chat-wrapper.forest .chat-input-area,
+.chat-wrapper.midnight .chat-input-area,
+.chat-wrapper.rose .chat-input-area,
+.chat-wrapper.aurora .chat-input-area {
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-wrapper.ocean .send-button,
+.chat-wrapper.sunset .send-button,
+.chat-wrapper.forest .send-button,
+.chat-wrapper.midnight .send-button,
+.chat-wrapper.rose .send-button,
+.chat-wrapper.aurora .send-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 1px solid rgba(102, 126, 234, 0.5);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.chat-wrapper.ocean .send-button:hover:not(:disabled),
+.chat-wrapper.sunset .send-button:hover:not(:disabled),
+.chat-wrapper.forest .send-button:hover:not(:disabled),
+.chat-wrapper.midnight .send-button:hover:not(:disabled),
+.chat-wrapper.rose .send-button:hover:not(:disabled),
+.chat-wrapper.aurora .send-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #7c8ff5 0%, #8a5bb8 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.5);
+}
+
+/* Theme toggle button special styling */
+.theme-toggle {
+  min-width: 120px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
