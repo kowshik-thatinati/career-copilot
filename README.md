@@ -146,6 +146,10 @@ career-guru/
 2. **Install dependencies**
    ```bash
    npm install
+
+   note: If the above line doesnt work, add the flag of legacy peer deps i.e.
+
+   npm install --legacy-peer-deps
    ```
 
 3. **Configure Firebase**
