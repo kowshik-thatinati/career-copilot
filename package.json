@@ -1,48 +1,31 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@react-three/drei": "^10.7.6",
-    "@react-three/fiber": "^9.4.0",
-    "@vitalets/google-translate-api": "^9.2.1",
-    "axios": "^1.12.2",
-    "body-parser": "^2.2.0",
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "firebase": "^12.2.1",
-    "i18next": "^25.4.0",
-    "i18next-browser-languagedetector": "^8.2.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "react-i18next": "^15.7.0",
-    "react-router-dom": "^7.8.2",
-    "react-scripts": "^5.0.1",
-    "three": "^0.181.0",
-    "web-vitals": "^2.1.4"
-  },
+  "name": "career-compass",
+  "version": "1.0.0",
+  "description": "Career Compass - AI-powered career guidance platform",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "install-all": "cd frontend && npm install && cd ../backend && npm install",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:frontend": "cd frontend && npm start",
+    "start:backend": "cd backend && npm start",
+    "build": "cd frontend && npm run build",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "devDependencies": {
+    "concurrently": "^8.2.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/career-compass"
+  },
+  "keywords": [
+    "career",
+    "ai",
+    "education",
+    "guidance",
+    "gemini"
+  ],
+  "author": "",
+  "license": "MIT"
 }

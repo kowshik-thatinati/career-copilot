@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF, PerspectiveCamera } from "@react-three/drei";
 import { useTheme } from "../contexts/ThemeContext";
+import { API_ENDPOINTS } from "../config/api";
 import "../styles/TeacherJoeAvatar.css";
 
 // Teacher Joe 3D Model Component
@@ -190,7 +191,7 @@ export default function TeacherJoeAvatar({ onToggleView }) {
     setIsProcessing(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/gemini", {
+      const res = await fetch(API_ENDPOINTS.GEMINI, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: userSpeech }),

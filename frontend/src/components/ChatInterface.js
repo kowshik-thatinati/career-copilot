@@ -4,6 +4,7 @@ import MessageBubble from './MessageBubble';
 import ThinkingAnimation from './ThinkingAnimation';
 import LanguageSelector from './LanguageSelector';
 import AddfilesButton from './AddfilesButton.js';
+import { API_ENDPOINTS } from '../config/api';
 import { loadHistory, saveHistory, clearHistory } from '../utils/Storage';
 import { loadHistoryFromFirebase, saveHistoryToFirebase } from '../services/FirebaseStorage';
 import { auth } from '../services/firebase';
@@ -135,7 +136,7 @@ function ChatInterface({ onToggleView }) {
   const generateChatTitle = async (firstMessage) => {
     console.log('🔄 Generating title for:', firstMessage);
     try {
-      const res = await fetch('http://localhost:5000/api/generate-title', {
+      const res = await fetch(API_ENDPOINTS.GENERATE_TITLE, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: firstMessage }),
@@ -185,7 +186,7 @@ function ChatInterface({ onToggleView }) {
 
     // Call backend for Gemini API
     try {
-      const res = await fetch('http://localhost:5000/api/gemini', {
+      const res = await fetch(API_ENDPOINTS.GEMINI, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: userInput }),

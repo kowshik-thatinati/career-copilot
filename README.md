@@ -1,329 +1,267 @@
-# Career Copilot 🎓
+# 🎓 Career Compass
 
-Your AI-Powered Education & Career Assistant
-
-## 📋 Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Configuration](#configuration)
-
----
-
-## 🎯 Overview
-
-Career Copilot is an intelligent AI assistant designed to help students and professionals with:
-- **Career Guidance** - Personalized career advice and planning
-- **Educational Resources** - Access to learning materials and recommendations
-- **Job & Internship Help** - Assistance with job searching and applications
-- **Live Voice Assistant** - Interactive 3D avatar with speech recognition and synthesis
-
----
+**Navigate your career journey with precision** - An AI-powered career guidance platform that helps students and professionals make informed decisions about their education, career paths, and professional development.
 
 ## ✨ Features
 
-### 1. **AI Chat Interface**
-- Real-time conversations with Gemini AI
-- Multi-language support (12 languages)
-- Chat history saved to Firebase
-- Dark/Light mode toggle
-- File attachment support
+- 🤖 **AI-Powered Chat**: Get personalized career advice using Google's Gemini AI
+- 🎙️ **Voice Assistant (Teacher Joe)**: Interactive 3D avatar with voice recognition and text-to-speech
+- 🔐 **Firebase Authentication**: Secure user login and signup
+- 💾 **Cloud Storage**: Save and sync your conversation history across devices
+- 🌍 **Multi-language Support**: Translate conversations to multiple languages
+- 🌓 **Dark/Light Mode**: Comfortable viewing in any lighting condition
+- 📱 **Responsive Design**: Works seamlessly on desktop and mobile devices
 
-### 2. **Voice Assistant (Teacher Joe)**
-- Realistic 3D human avatar
-- Speech recognition (speak your questions)
-- Text-to-speech responses
-- Visual speaking indicators
-- Full conversation history
-
-### 3. **Authentication**
-- Email/Password login
-- Google Sign-In
-- Firebase authentication
-- Persistent sessions
-
-### 4. **Theming**
-- Global dark/light mode
-- Synchronized across all pages
-- Persists in localStorage
-- Smooth transitions
-
----
-
-## 🛠️ Tech Stack
-
-### Frontend
-- **React** 18.x - UI framework
-- **React Router** - Navigation
-- **React Three Fiber** - 3D rendering
-- **i18next** - Internationalization
-- **CSS3** - Styling with modern features
-
-### Backend
-- **Node.js** - Runtime
-- **Express** - Web server
-- **Google Gemini API** - AI responses
-
-### Services
-- **Firebase Authentication** - User management
-- **Firebase Firestore** - Chat history storage
-- **Web Speech API** - Speech recognition & synthesis
-
----
-
-## 📁 Project Structure
+## 🏗️ Project Structure
 
 ```
-career-guru/
-├── public/
-│   ├── models/
-│   │   └── teacher-joe.glb          # 3D avatar model
-│   └── index.html
+career-compass/
+├── frontend/           # React application
+│   ├── public/        # Static assets
+│   ├── src/
+│   │   ├── components/    # React components
+│   │   ├── pages/         # Page components
+│   │   ├── services/      # API services
+│   │   ├── contexts/      # React contexts
+│   │   ├── config/        # Configuration files
+│   │   ├── styles/        # CSS files
+│   │   └── utils/         # Utility functions
+│   └── package.json
 │
-├── src/
-│   ├── components/                   # Reusable components
-│   │   ├── AddfilesButton.js
-│   │   ├── ChatInterface.js         # Main chat UI
-│   │   ├── LanguageSelector.js
-│   │   ├── MessageBubble.js
-│   │   └── Sidebar.js
-│   │
-│   ├── contexts/                     # React contexts
-│   │   └── ThemeContext.js          # Global theme management
-│   │
-│   ├── pages/                        # Page components
-│   │   ├── Auth.js                  # Authentication modal
-│   │   ├── LandingPage.js           # Landing page
-│   │   └── TeacherJoeAvatar.jsx     # 3D voice assistant
-│   │
-│   ├── services/                     # External services
-│   │   ├── firebase.js              # Firebase config
-│   │   ├── FirebaseStorage.js       # Firestore operations
-│   │   ├── geminiApi.js             # Gemini API calls
-│   │   └── translateText.js         # Translation service
-│   │
-│   ├── styles/                       # CSS files
-│   │   ├── auth-beautiful.css
-│   │   ├── chat-professional.css
-│   │   ├── landing-beautiful.css
-│   │   ├── LanguageSelector.css
-│   │   └── TeacherJoeAvatar.css
-│   │
-│   ├── utils/                        # Utility functions
-│   │   ├── languages.js             # Language codes
-│   │   └── Storage.js               # Local storage helpers
-│   │
-│   ├── App.js                        # Main app component
-│   ├── i18n.js                       # i18n configuration
-│   └── index.js                      # Entry point
+├── backend/           # Express server
+│   ├── server.js     # Main server file
+│   └── package.json
 │
-├── server.js                         # Express backend server
-├── package.json                      # Dependencies
-└── README.md                         # This file
+└── package.json      # Root package file
 ```
-
----
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- **Node.js** (v14 or higher)
-- **npm** (v6 or higher)
-- **Firebase account** (for authentication)
-- **Google Gemini API key**
+
+- **Node.js** (v16 or higher)
+- **npm** or **yarn**
+- **Gemini API Key** from [Google AI Studio](https://makersuite.google.com/app/apikey)
+- **Firebase Project** (for authentication and storage)
 
 ### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
-   cd career-guru
+   git clone https://github.com/yourusername/career-compass.git
+   cd career-compass
    ```
 
-2. **Install dependencies**
+2. **Install dependencies for both frontend and backend**
    ```bash
+   npm run install-all
+   ```
+
+   Or install manually:
+   ```bash
+   # Install root dependencies
    npm install
 
-   note: If the above line doesnt work, add the flag of legacy peer deps i.e.
+   # Install frontend dependencies
+   cd frontend
+   npm install
 
-   npm install --legacy-peer-deps
+   # Install backend dependencies
+   cd ../backend
+   npm install
    ```
 
-3. **Configure Firebase**
-   - Create a Firebase project at [firebase.google.com](https://firebase.google.com)
-   - Enable Authentication (Email/Password and Google)
-   - Enable Firestore Database
-   - Copy your Firebase config to `src/services/firebase.js`
+### Configuration
 
-4. **Configure Gemini API**
-   - Get API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-   - Add to `server.js`:
-     ```javascript
-     const API_KEY = 'your-gemini-api-key';
-     ```
+#### Backend Configuration
 
-5. **Add 3D Model** (Optional)
-   - Download a 3D model (GLB format)
-   - Place in `public/models/teacher-joe.glb`
-   - Or use any free model from [Sketchfab](https://sketchfab.com)
+1. Create a `.env` file in the `backend/` directory:
+   ```bash
+   cd backend
+   cp .env.example .env
+   ```
 
----
+2. Add your Gemini API key to `.env`:
+   ```env
+   PORT=5000
+   GEMINI_API_KEY=your_gemini_api_key_here
+   ```
 
-## 🎮 Usage
+#### Frontend Configuration
 
-### Starting the Application
+1. Create a `.env` file in the `frontend/` directory:
+   ```bash
+   cd frontend
+   cp .env.example .env
+   ```
 
-**You need to run TWO servers:**
+2. Add your configuration:
+   ```env
+   REACT_APP_API_URL=http://localhost:5000
+   ```
 
-#### 1. Start Backend Server
-```bash
-node server.js
-```
-✅ Server runs at `http://localhost:5000`
+3. Update Firebase configuration in `frontend/src/services/firebase.js` with your Firebase project credentials.
 
-#### 2. Start React Frontend
+### Running the Application
+
+#### Option 1: Run Both Frontend and Backend Together (Recommended)
+
+From the root directory:
 ```bash
 npm start
 ```
-✅ App opens at `http://localhost:3000`
 
-### Using the App
+This will start:
+- Backend server on `http://localhost:5000`
+- Frontend development server on `http://localhost:3000`
 
-1. **Landing Page**
-   - Toggle theme (☀️/🌙)
-   - Click "Login" or "Sign Up"
+#### Option 2: Run Separately
 
-2. **Authentication**
-   - Sign up with email/password
-   - Or use Google Sign-In
-   - Click "Continue to Chat" if already logged in
-
-3. **Chat Interface**
-   - Type messages and get AI responses
-   - Change language (top-right dropdown)
-   - Toggle theme
-   - Clear chat history
-   - Create new conversations
-
-4. **Voice Assistant**
-   - Click "Talk Live" in sidebar
-   - Click "🎤 Start Speaking"
-   - Speak your question
-   - Watch Teacher Joe respond with voice
-   - Toggle theme
-
----
-
-## ⚙️ Configuration
-
-### Environment Variables
-
-Create a `.env` file (optional):
-```env
-REACT_APP_FIREBASE_API_KEY=your_api_key
-REACT_APP_FIREBASE_AUTH_DOMAIN=your_domain
-REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+**Terminal 1 - Backend:**
+```bash
+cd backend
+npm start
 ```
 
-### Supported Languages
+**Terminal 2 - Frontend:**
+```bash
+cd frontend
+npm start
+```
 
-The app supports 12 languages:
-- English (en)
-- Spanish (es)
-- French (fr)
-- German (de)
-- Chinese (zh)
-- Japanese (ja)
-- Korean (ko)
-- Hindi (hi)
-- Arabic (ar)
-- Portuguese (pt)
-- Russian (ru)
-- Italian (it)
+#### Development Mode with Auto-Reload
 
-### Theme Configuration
+```bash
+npm run dev
+```
 
-- **Default Theme**: Dark mode
-- **Storage**: localStorage (`theme` key)
-- **Values**: `'dark'` or `'light'`
-- **Sync**: Automatic across all pages
+This runs the backend with nodemon for auto-restart on file changes.
 
----
-
-## 🎨 Features Breakdown
+## 📖 Usage Guide
 
 ### Chat Interface
-- **AI Responses**: Powered by Google Gemini
-- **History**: Saved to Firebase Firestore
-- **Translation**: Real-time message translation
-- **Files**: Attach files to conversations
-- **Themes**: Dark/Light mode with smooth transitions
 
-### Voice Assistant
-- **3D Avatar**: Realistic human model
-- **Speech Input**: Web Speech API recognition
-- **Voice Output**: Text-to-speech synthesis
-- **Visual Feedback**: Sound waves and status indicators
-- **Conversation**: Full chat history display
+1. **Sign Up/Login**: Create an account or log in with existing credentials
+2. **Start Chatting**: Type your career-related questions in the input box
+3. **Get AI Responses**: Receive personalized guidance from Career Compass
+4. **Manage Conversations**: 
+   - Create new conversations with the "New Chat" button
+   - Switch between conversations in the sidebar
+   - Conversations are automatically saved to the cloud
 
-### Landing Page
-- **Modern Design**: Glass-morphism effects
-- **Animations**: Smooth transitions and hover effects
-- **Responsive**: Works on all screen sizes
-- **Theme Toggle**: Persistent across sessions
+### Talk Live (Teacher Joe)
 
----
+1. Click the **"Talk Live"** button in the sidebar
+2. Click **"Start Speaking"** to activate voice recognition
+3. Speak your question clearly
+4. Teacher Joe will respond with voice and text
+5. Click **"Stop Speaking"** to interrupt the response
 
-## 🔧 Troubleshooting
+### Features
 
-### Common Issues
+- **File Attachments**: Click the 📎 icon to attach files to your messages
+- **Language Translation**: Use the language selector to translate conversations
+- **Dark/Light Mode**: Toggle between themes using the 🌙/☀️ button
+- **Clear History**: Remove all conversations with the "Clear" button
 
-**1. Backend not connecting**
-- Ensure `server.js` is running on port 5000
-- Check Gemini API key is correct
+## 🛠️ Tech Stack
 
-**2. Firebase errors**
-- Verify Firebase config in `src/services/firebase.js`
-- Check Firebase console for enabled services
+### Frontend
+- **React** 19.1.1 - UI framework
+- **React Router** - Navigation
+- **Three.js** & **React Three Fiber** - 3D graphics for Teacher Joe
+- **Firebase** - Authentication and cloud storage
+- **i18next** - Internationalization
+- **Web Speech API** - Voice recognition and synthesis
 
-**3. Voice not working**
-- Use Chrome, Edge, or Safari (best support)
-- Allow microphone permissions
-- Ensure backend server is running
+### Backend
+- **Express** - Web server framework
+- **Axios** - HTTP client for Gemini API
+- **CORS** - Cross-origin resource sharing
+- **Body Parser** - Request body parsing
+- **Google Gemini AI** - AI-powered responses
 
-**4. 3D model not loading**
-- Check file is at `public/models/teacher-joe.glb`
-- Verify file format is GLB
-- Check browser console for errors
+## 📦 Building for Production
 
----
-
-## 📝 Scripts
+### Build Frontend
 
 ```bash
-# Start development server
-npm start
-
-# Build for production
+cd frontend
 npm run build
-
-# Run backend server
-node server.js
-
-# Install dependencies
-npm install
 ```
 
----
+This creates an optimized production build in the `frontend/build/` directory.
+
+### Deploy Backend
+
+The backend can be deployed to platforms like:
+- **Heroku**
+- **Railway**
+- **Render**
+- **AWS EC2**
+- **Google Cloud Platform**
+
+Make sure to set environment variables on your hosting platform.
+
+### Deploy Frontend
+
+The frontend can be deployed to:
+- **Vercel**
+- **Netlify**
+- **GitHub Pages**
+- **Firebase Hosting**
+
+Update the `REACT_APP_API_URL` environment variable to point to your deployed backend.
+
+## 🔑 Environment Variables
+
+### Backend (.env)
+```env
+PORT=5000
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+### Frontend (.env)
+```env
+REACT_APP_API_URL=http://localhost:5000
+```
 
 ## 🤝 Contributing
 
+Contributions are welcome! Please feel free to submit a Pull Request.
+
 1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- **Google Gemini AI** for powering the AI responses
+- **Firebase** for authentication and storage
+- **Three.js** community for 3D graphics support
+- **React** community for the amazing ecosystem
+
+## 📧 Support
+
+For support, email your-email@example.com or open an issue in the repository.
+
+## 🔮 Future Enhancements
+
+- [ ] Resume builder and analyzer
+- [ ] Job search integration
+- [ ] Career path visualization
+- [ ] Interview preparation tools
+- [ ] Skill assessment tests
+- [ ] Mentor matching system
+- [ ] Company reviews and insights
+- [ ] Salary comparison tools
+
+---
+
+**Made with ❤️ for students and professionals navigating their career journey**
