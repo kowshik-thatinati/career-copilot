@@ -49,7 +49,7 @@ function LandingPage({ onAuthSuccess }) {
             <img src="https://img.icons8.com/fluency/200/graduation-cap.png" alt="Career Compass Icon" />
           </div>
           <h1 className="hero-title">Career Compass</h1>
-          <p className="hero-subtitle">Navigate your journey with precisio</p>
+          <p className="hero-subtitle">Navigate your journey with precision</p>
           <p className="hero-description">
             Get personalized career guidance, access educational resources, explore tech stacks, 
             find internships, and plan your professional journey with our intelligent AI assistant.
