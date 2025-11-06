@@ -1,7 +1,7 @@
-import express from "express";
-import cors from "cors";
-import axios from "axios";
-import bodyParser from "body-parser";
+const express = require("express");
+const cors = require("cors");
+const axios = require("axios");
+const bodyParser = require("body-parser");
 
 const app = express();
 const PORT = 5000;

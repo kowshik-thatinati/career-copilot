@@ -3,19 +3,19 @@ import Sidebar from './Sidebar';
 import MessageBubble from './MessageBubble';
 import LanguageSelector from './LanguageSelector';
 import AddfilesButton from './AddfilesButton.js';
-import { loadHistory, saveHistory, clearHistory } from './Storage';
-import { loadHistoryFromFirebase, saveHistoryToFirebase } from './FirebaseStorage';
-import { auth } from './firebase';
+import { loadHistory, saveHistory, clearHistory } from '../utils/Storage';
+import { loadHistoryFromFirebase, saveHistoryToFirebase } from '../services/FirebaseStorage';
+import { auth } from '../services/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import { useTranslation } from 'react-i18next';
-import { translateText } from './translateText';
-import './chat.css';
-import './modern-glass.css';
-import './colored-themes.css';
+import { translateText } from '../services/translateText';
+import { useTheme } from '../contexts/ThemeContext';
+import '../styles/chat-professional.css';
 
 function ChatInterface({ onToggleView }) {
   const chatEndRef = useRef(null);
   const { t, i18n } = useTranslation();
+  const { isDarkMode, toggleTheme } = useTheme();
 
   const [input, setInput] = useState('');
   const [conversations, setConversations] = useState([{
@@ -25,14 +25,9 @@ function ChatInterface({ onToggleView }) {
   }]);
   const [activeId, setActiveId] = useState('default');
   const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [theme, setTheme] = useState('ocean'); // Default: ocean theme
   const [translating, setTranslating] = useState(false);
   const [selectedFiles, setSelectedFiles] = useState([]);
-  const [isGeneratingTitle, setIsGeneratingTitle] = useState(false);
   const [isLoadingHistory, setIsLoadingHistory] = useState(true);
-  
-  // Available themes
-  const themes = ['ocean', 'sunset', 'forest', 'midnight', 'rose', 'aurora'];
 
   const activeMessages = conversations.find(c => c.id === activeId)?.messages || [];
 
@@ -177,14 +172,12 @@ function ChatInterface({ onToggleView }) {
 
     // Generate title for first message
     if (isFirstMessage) {
-      setIsGeneratingTitle(true);
       const newTitle = await generateChatTitle(userInput);
       setConversations(prev =>
         prev.map(c =>
           c.id === activeId ? { ...c, title: newTitle } : c
         )
       );
-      setIsGeneratingTitle(false);
     }
 
     // Call backend for Gemini API
@@ -235,28 +228,11 @@ function ChatInterface({ onToggleView }) {
     setActiveId('default');
   };
 
-  const toggleTheme = () => {
-    const currentIndex = themes.indexOf(theme);
-    const nextIndex = (currentIndex + 1) % themes.length;
-    setTheme(themes[nextIndex]);
-  };
-  
-  const getThemeLabel = () => {
-    const labels = {
-      ocean: '🌊 Ocean',
-      sunset: '🌅 Sunset',
-      forest: '🌲 Forest',
-      midnight: '🌙 Midnight',
-      rose: '🌹 Rose',
-      aurora: '✨ Aurora'
-    };
-    return labels[theme] || theme;
-  };
   
   const toggleSidebar = () => setSidebarOpen(prev => !prev);
 
   return (
-    <div className={`chat-wrapper ${theme}`}>
+    <div className={`chat-wrapper ${isDarkMode ? 'dark' : 'light'}`}>
       <Sidebar
         conversations={conversations}
         activeId={activeId}
@@ -282,7 +258,7 @@ function ChatInterface({ onToggleView }) {
           <div className="header-buttons">
             <button className="clear-button" onClick={handleClear} disabled={translating}>{t('clear')}</button>
             <button className="toggle-button theme-toggle" onClick={toggleTheme}>
-              {getThemeLabel()}
+              {isDarkMode ? '☀️ Light' : '🌙 Dark'}
             </button>
             <LanguageSelector />
           </div>

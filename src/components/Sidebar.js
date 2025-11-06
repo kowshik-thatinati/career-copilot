@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signOut } from "firebase/auth";
-import { auth } from "./firebase";
-import { clearHistory } from './Storage';
-import { clearHistoryFromFirebase } from './FirebaseStorage';
-import logo from './Gemini_Generated_Image_u4fr21u4fr21u4fr.png';
+import { auth } from "../services/firebase";
+import { clearHistory } from '../utils/Storage';
+import { clearHistoryFromFirebase } from '../services/FirebaseStorage';
+import logo from '../assets/Gemini_Generated_Image_u4fr21u4fr21u4fr.png';
 
 function Sidebar({ conversations, activeId, setActiveId, handleNewConversation, sidebarOpen, toggleSidebar, onToggleView }) {
   const [showMenu, setShowMenu] = useState(false);
