@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Sidebar from './Sidebar';
 import MessageBubble from './MessageBubble';
+import ThinkingAnimation from './ThinkingAnimation';
 import LanguageSelector from './LanguageSelector';
 import AddfilesButton from './AddfilesButton.js';
 import { loadHistory, saveHistory, clearHistory } from '../utils/Storage';
@@ -28,6 +29,7 @@ function ChatInterface({ onToggleView }) {
   const [translating, setTranslating] = useState(false);
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [isLoadingHistory, setIsLoadingHistory] = useState(true);
+  const [isThinking, setIsThinking] = useState(false);
 
   const activeMessages = conversations.find(c => c.id === activeId)?.messages || [];
 
@@ -169,6 +171,7 @@ function ChatInterface({ onToggleView }) {
     const userInput = input;
     setInput('');
     setSelectedFiles([]);
+    setIsThinking(true);
 
     // Generate title for first message
     if (isFirstMessage) {
@@ -203,6 +206,8 @@ function ChatInterface({ onToggleView }) {
           c.id === activeId ? { ...c, messages: [...c.messages, botReply] } : c
         )
       );
+    } finally {
+      setIsThinking(false);
     }
   };
 
@@ -276,6 +281,7 @@ function ChatInterface({ onToggleView }) {
               )}
             </MessageBubble>
           ))}
+          {isThinking && <ThinkingAnimation />}
           <div ref={chatEndRef} />
         </div>
         <div className="chat-input-area">

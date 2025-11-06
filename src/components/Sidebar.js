@@ -36,11 +36,11 @@ function Sidebar({ conversations, activeId, setActiveId, handleNewConversation, 
       <div className="sidebar-header">
         <img
           src={logo}
-          alt="Career Copilot Logo"
+          alt="Career Compass Logo"
           className="logo"
           onClick={() => setShowLogoModal(true)}
         />
-        <h3>Career Copilot</h3>
+        <h3>Career Compass</h3>
         <button onClick={toggleSidebar} aria-label="Close sidebar">
           ✖
         </button>

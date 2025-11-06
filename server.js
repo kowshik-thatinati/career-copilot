@@ -81,7 +81,7 @@ app.post("/api/gemini", async (req, res) => {
   }
 
   // System prompt to restrict to education and career topics
-  const systemPrompt = `You are Career Copilot, an AI assistant specialized ONLY in education, career guidance, job search, skills development, academic advice, and professional growth.
+  const systemPrompt = `You are Career Compass, an AI assistant specialized ONLY in education, career guidance, job search, skills development, academic advice, and professional growth.
 
 STRICT RULES:
 1. ONLY answer questions related to: education, careers, jobs, skills, courses, degrees, certifications, resume help, interview prep, career planning, study tips, academic subjects, professional development, workplace advice, and career transitions.

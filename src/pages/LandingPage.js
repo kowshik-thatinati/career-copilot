@@ -29,8 +29,8 @@ function LandingPage({ onAuthSuccess }) {
       <header className="landing-header">
         <div className="header-content">
           <div className="logo-section">
-            <img src="https://img.icons8.com/fluency/96/graduation-cap.png" alt="Career Copilot" className="logo-img" />
-            <h1 className="logo-text">Career Copilot</h1>
+            <img src="https://img.icons8.com/fluency/96/graduation-cap.png" alt="Career Compass" className="logo-img" />
+            <h1 className="logo-text">Career Compass</h1>
           </div>
           <div className="header-buttons">
             <button className="theme-toggle-btn" onClick={toggleTheme} title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>
@@ -46,10 +46,10 @@ function LandingPage({ onAuthSuccess }) {
       <section className="hero-section">
         <div className="hero-content">
           <div className="hero-icon">
-            <img src="https://img.icons8.com/fluency/200/graduation-cap.png" alt="Career Copilot Icon" />
+            <img src="https://img.icons8.com/fluency/200/graduation-cap.png" alt="Career Compass Icon" />
           </div>
-          <h1 className="hero-title">Career Copilot</h1>
-          <p className="hero-subtitle">Your AI-Powered Education & Career Assistant</p>
+          <h1 className="hero-title">Career Compass</h1>
+          <p className="hero-subtitle">Navigate your journey with precisio</p>
           <p className="hero-description">
             Get personalized career guidance, access educational resources, explore tech stacks, 
             find internships, and plan your professional journey with our intelligent AI assistant.
@@ -87,7 +87,7 @@ function LandingPage({ onAuthSuccess }) {
 
       {/* Footer */}
       <footer className="landing-footer">
-        <p>&copy; 2025 Career Copilot. All rights reserved.</p>
+        <p>&copy; 2025 Career Compass. All rights reserved.</p>
         <p>Empowering your education and career decisions with AI</p>
       </footer>
 
