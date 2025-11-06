@@ -186,7 +186,10 @@ This runs the backend with nodemon for auto-restart on file changes.
 ### Build Frontend
 
 ```bash
-cd frontend
+# Start development server
+npm start
+
+# Build for production
 npm run build
 ```
 
