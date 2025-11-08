@@ -1,4 +1,4 @@
-mail
+
 
 
 # 🎓 Career Compass
@@ -773,6 +773,8 @@ Need help? Have questions?
 - 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/career-compass/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/career-compass/discussions)
 - 📖 **Documentation**: [Wiki](https://github.com/yourusername/career-compass/wiki)
+
+( NOTE : AFTER OPENING THE ABOOVE LINK IN URL REPLACE "yourusername" WITH YOUR GITHUB USERNAME. OTHERWISE THE LINK WONT'T WORK )
 
 ## 🔮 Future Enhancements
 
