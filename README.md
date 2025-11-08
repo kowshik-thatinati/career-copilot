@@ -822,5 +822,5 @@ If you find this project helpful, please consider giving it a star on GitHub! �
 **Made with ❤️ for students and professionals navigating their career journey**
 
 **Version**: 1.0.0  
-**Last Updated**: November 2024  
+**Last Updated**: November 2025
 **Maintained by**: TEAM CRYPT
