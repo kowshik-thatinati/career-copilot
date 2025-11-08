@@ -766,7 +766,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Need help? Have questions?
 
-- 📧 **Email**: your-email@example.com
+- 📧 **Email**: your-chinna4812@example.com
 - 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/career-compass/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/career-compass/discussions)
 - 📖 **Documentation**: [Wiki](https://github.com/yourusername/career-compass/wiki)
