@@ -818,4 +818,4 @@ If you find this project helpful, please consider giving it a star on GitHub! тн
 
 **Version**: 1.0.0  
 **Last Updated**: November 2024  
-**Maintained by**: [Your Name/Team]
+**Maintained by**: TEAM CRYPT
