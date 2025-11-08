@@ -774,7 +774,7 @@ Need help? Have questions?
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/career-compass/discussions)
 - 📖 **Documentation**: [Wiki](https://github.com/yourusername/career-compass/wiki)
 
-( NOTE : AFTER OPENING THE ABOOVE LINK IN URL REPLACE "yourusername" WITH YOUR GITHUB USERNAME. OTHERWISE THE LINK WONT'T WORK )
+( NOTE : AFTER OPENING THE ABOVE LINK IN URL REPLACE "yourusername" WITH YOUR GITHUB USERNAME. OTHERWISE THE LINK WONT'T WORK. )
 
 ## 🔮 Future Enhancements
 
